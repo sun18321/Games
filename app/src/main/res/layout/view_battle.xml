@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="240dp"
+              android:background="@drawable/bg_game_panel"
+              android:padding="10dp"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="3"
+        android:layout_margin="5dp"
+        >
+
+       <RelativeLayout
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:layout_margin="5dp"
+           android:background="@mipmap/bg_live_pop_msg_normal"
+           android:padding="5dp"
+           >
+           <include layout="@layout/poker_group_start"/>
+
+       </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:layout_margin="5dp"
+           android:background="@mipmap/bg_live_pop_msg_normal"
+           android:padding="5dp"
+           >
+
+           <include layout="@layout/poker_group_start"/>
+
+       </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:layout_margin="5dp"
+           android:background="@mipmap/bg_live_pop_msg_normal"
+           android:padding="5dp"
+           >
+
+           <include layout="@layout/poker_group_start"/>
+
+       </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="3"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@mipmap/bg_live_pop_msg_normal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            >
+            <ImageView
+                android:src="@mipmap/ic_bull_starblue"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@mipmap/bg_live_pop_msg_normal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            >
+            <ImageView
+                android:src="@mipmap/ic_bull_starred"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@mipmap/bg_live_pop_msg_normal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            >
+            <ImageView
+                android:src="@mipmap/ic_bull_staryello"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
