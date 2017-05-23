@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+    >
+
+<LinearLayout
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="240dp"
@@ -16,6 +21,7 @@
         >
 
        <RelativeLayout
+           android:id="@+id/player_1"
            android:layout_width="0dp"
            android:layout_weight="1"
            android:layout_height="match_parent"
@@ -27,6 +33,7 @@
 
        </RelativeLayout>
        <RelativeLayout
+           android:id="@+id/player_2"
            android:layout_width="0dp"
            android:layout_weight="1"
            android:layout_height="match_parent"
@@ -39,6 +46,7 @@
 
        </RelativeLayout>
        <RelativeLayout
+           android:id="@+id/player_3"
            android:layout_width="0dp"
            android:layout_weight="1"
            android:layout_height="match_parent"
@@ -70,6 +78,7 @@
             android:paddingBottom="5dp"
             >
             <ImageView
+                android:id="@+id/bull_1"
                 android:src="@mipmap/ic_bull_starblue"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"/>
@@ -85,9 +94,11 @@
             android:paddingBottom="5dp"
             >
             <ImageView
+                android:id="@+id/bull_2"
                 android:src="@mipmap/ic_bull_starred"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"/>
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -100,13 +111,29 @@
             android:paddingBottom="5dp"
             >
             <ImageView
+                android:id="@+id/bull_3"
                 android:src="@mipmap/ic_bull_staryello"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"/>
 
         </RelativeLayout>
-
-
     </LinearLayout>
-
 </LinearLayout>
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:id="@+id/poker_deal"
+        android:src="@mipmap/img_bullflight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/poker_translate"
+        android:background="@mipmap/poker_back_bull"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="134dp"
+        android:layout_width="40dp"
+        android:layout_height="48dp"/>
+
+
+</RelativeLayout>
