@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView mIv_start;
     private ImageView mIv_close;
 
+    private boolean firstPoker = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,19 +52,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if (gameShow) {
                     getSupportFragmentManager().beginTransaction().hide(mGameFragment).commit();
+                    mIv_start.setVisibility(View.INVISIBLE);
+                    mIv_close.setVisibility(View.INVISIBLE);
                 } else {
                     getSupportFragmentManager().beginTransaction().show(mGameFragment).commit();
+                    mIv_start.setVisibility(View.VISIBLE);
+                    mIv_close.setVisibility(View.VISIBLE);
                 }
                 gameShow = !gameShow;
                 break;
             case R.id.game_start:
-
-                mGameFragment.sendPoker();
+                if (firstPoker) {
+                    mGameFragment.gameReset();
+                } else {
+                    mGameFragment.sendPoker();
+                    firstPoker = !firstPoker;
+                }
+                mIv_start.setClickable(false);
                 break;
             case R.id.game_close:
 
                 break;
         }
+    }
+
+    public void startClick() {
+        mIv_start.setClickable(true);
     }
 
 }

@@ -30,6 +30,7 @@
            android:padding="5dp"
            >
            <include layout="@layout/poker_group_start"/>
+           <include layout="@layout/view_poker_group"/>
 
        </RelativeLayout>
        <RelativeLayout
@@ -43,6 +44,7 @@
            >
 
            <include layout="@layout/poker_group_start"/>
+           <include layout="@layout/view_poker_group"/>
 
        </RelativeLayout>
        <RelativeLayout
@@ -56,6 +58,7 @@
            >
 
            <include layout="@layout/poker_group_start"/>
+           <include layout="@layout/view_poker_group"/>
 
        </RelativeLayout>
 
@@ -120,6 +123,7 @@
     </LinearLayout>
 </LinearLayout>
     <ImageView
+        android:visibility="invisible"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
         android:id="@+id/poker_deal"
@@ -129,11 +133,34 @@
 
     <ImageView
         android:id="@+id/poker_translate"
+        android:visibility="invisible"
         android:background="@mipmap/poker_back_bull"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="134dp"
         android:layout_width="40dp"
         android:layout_height="48dp"/>
+
+   <RelativeLayout
+       android:id="@+id/game_start_toast"
+       android:visibility="invisible"
+       android:layout_marginTop="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <ImageView
+           android:layout_centerInParent="true"
+           android:src="@mipmap/bg_poker_toast"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+       <ImageView
+           android:layout_centerInParent="true"
+           android:src="@mipmap/toast_bpks"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+
+
+   </RelativeLayout>
 
 
 </RelativeLayout>

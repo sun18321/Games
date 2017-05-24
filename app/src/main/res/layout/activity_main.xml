@@ -26,6 +26,7 @@
 
             <ImageView
                 android:id="@+id/game_start"
+                android:visibility="invisible"
                 android:layout_marginLeft="10dp"
                 android:src="@mipmap/ic_bottom_start"
                 android:layout_width="30dp"
@@ -33,6 +34,7 @@
 
             <ImageView
                 android:id="@+id/game_close"
+                android:visibility="invisible"
                 android:src="@mipmap/ic_bottom_close"
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
