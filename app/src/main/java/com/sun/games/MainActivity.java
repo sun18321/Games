@@ -9,6 +9,13 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.Socket;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FrameLayout mFrameLayout;
@@ -20,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView mIv_close;
 
     private boolean firstPoker = true;
+    private Socket mSocket;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +87,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void startClick() {
         mIv_start.setClickable(true);
+    }
+
+    private void connectServerWithTCPSocket() {
+        try {
+            mSocket = new Socket("192.168.1.32", 1989);
+            boolean connected = mSocket.isConnected();
+
+            //接受服务器数据
+            InputStream inputStream = mSocket.getInputStream();
+            InputStreamReader isr = new InputStreamReader(inputStream);
+            BufferedReader bufferedReader = new BufferedReader(isr);
+            bufferedReader.readLine();
+
+
+            //发送到服务器
+            OutputStream outputStream = mSocket.getOutputStream();
+            // 步骤2：写入需要发送的数据到输出流对象中
+            outputStream.write(("Carson_Ho" + "\n").getBytes("utf-8"));
+            // 特别注意：数据的结尾加上换行符才可让服务器端的readline()停止阻塞
+            outputStream.flush();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+//        os.close();
+//        // 断开 客户端发送到服务器 的连接，即关闭输出流对象OutputStream
+//
+//        br.close();
+//        // 断开 服务器发送到客户端 的连接，即关闭输入流读取器对象BufferedReader
+//
+//        socket.close();
+//        // 最终关闭整个Socket连接
+
+
     }
 
 }
