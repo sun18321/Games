@@ -5,6 +5,38 @@
     android:layout_height="match_parent"
     >
 
+    <Button
+        android:layout_centerInParent="true"
+        android:text="json"
+        android:id="@+id/btn_json"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_connect"
+        android:text="connect"
+        android:layout_above="@+id/btn_json"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_send"
+        android:text="send"
+        android:layout_above="@+id/btn_connect"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_receive"
+        android:text="receive"
+        android:layout_above="@+id/btn_send"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_alignParentBottom="true"
@@ -38,11 +70,7 @@
                 android:src="@mipmap/ic_bottom_close"
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
-
-
-
         </LinearLayout>
-
 
         <FrameLayout
             android:id="@+id/fl_games"

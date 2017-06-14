@@ -8,14 +8,15 @@
     >
 
     <RelativeLayout
+        android:id="@+id/group_single_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-
         <include layout="@layout/view_poker"/>
 
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/group_single_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -23,6 +24,7 @@
         <include layout="@layout/view_poker"/>
     </RelativeLayout>
     <RelativeLayout
+        android:id="@+id/group_single_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -30,6 +32,7 @@
         <include layout="@layout/view_poker"/>
     </RelativeLayout>
     <RelativeLayout
+        android:id="@+id/group_single_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -37,6 +40,7 @@
         <include layout="@layout/view_poker"/>
     </RelativeLayout>
     <RelativeLayout
+        android:id="@+id/group_single_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -60,7 +64,7 @@
         <ImageView
             android:id="@+id/fight_bull_number"
             android:layout_centerInParent="true"
-            android:background="@mipmap/text_bull_n4"
+            android:src="@mipmap/text_bull_n4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
