@@ -6,6 +6,7 @@
     >
 
     <Button
+        android:visibility="invisible"
         android:layout_centerInParent="true"
         android:text="json"
         android:id="@+id/btn_json"
@@ -13,6 +14,7 @@
         android:layout_height="wrap_content"/>
 
     <Button
+        android:visibility="invisible"
         android:id="@+id/btn_connect"
         android:text="connect"
         android:layout_above="@+id/btn_json"
@@ -21,6 +23,7 @@
         android:layout_height="wrap_content"/>
 
     <Button
+        android:visibility="invisible"
         android:id="@+id/btn_send"
         android:text="send"
         android:layout_above="@+id/btn_connect"
@@ -29,6 +32,7 @@
         android:layout_height="wrap_content"/>
 
     <Button
+        android:visibility="invisible"
         android:id="@+id/btn_receive"
         android:text="receive"
         android:layout_above="@+id/btn_send"
@@ -36,6 +40,68 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+
+    <RelativeLayout
+        android:id="@+id/rl_host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edit_host"
+            android:hint="主播id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_host"
+            android:text="我是主播"
+            android:layout_alignParentRight="true"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@+id/rl_host"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        >
+
+        <EditText
+            android:hint="主播id"
+            android:id="@+id/edit_guest_host"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:hint="观众id"
+            android:id="@+id/edit_guest"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_guest"
+            android:text="我是观众"
+            android:layout_alignParentRight="true"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+    <ImageView
+        android:src="@mipmap/img_poker_ace_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -80,6 +146,5 @@
         </FrameLayout>
 
     </LinearLayout>
-
 
 </RelativeLayout>

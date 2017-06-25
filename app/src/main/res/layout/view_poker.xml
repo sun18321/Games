@@ -20,8 +20,8 @@
             android:id="@+id/poker_number_center"
             android:layout_centerInParent="true"
             android:src="@mipmap/poker_diamond_k"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="50dp"
+            android:layout_height="60dp"/>
 
 
         <RelativeLayout
